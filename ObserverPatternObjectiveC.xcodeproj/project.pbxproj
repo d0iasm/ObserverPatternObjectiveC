@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		015340EC2A4473F4001FF5EF /* Donut.m in Sources */ = {isa = PBXBuildFile; fileRef = 015340EB2A4473F4001FF5EF /* Donut.m */; };
+		015340EE2A447439001FF5EF /* FoodTruckModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 015340ED2A447439001FF5EF /* FoodTruckModel.m */; };
 		0167BDC92A4463930053F587 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0167BDC82A4463930053F587 /* AppDelegate.m */; };
 		0167BDCC2A4463930053F587 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0167BDCB2A4463930053F587 /* SceneDelegate.m */; };
 		0167BDCF2A4463930053F587 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0167BDCE2A4463930053F587 /* ViewController.m */; };
@@ -37,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		015340EB2A4473F4001FF5EF /* Donut.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Donut.m; sourceTree = "<group>"; };
+		015340ED2A447439001FF5EF /* FoodTruckModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoodTruckModel.m; sourceTree = "<group>"; };
+		015340EF2A447478001FF5EF /* FoodTruckModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoodTruckModel.h; sourceTree = "<group>"; };
+		015340F02A4474B3001FF5EF /* Donut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Donut.h; sourceTree = "<group>"; };
 		0167BDC42A4463930053F587 /* ObserverPatternObjectiveC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObserverPatternObjectiveC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0167BDC72A4463930053F587 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0167BDC82A4463930053F587 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -81,6 +87,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		015340F12A4475F4001FF5EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				015340EB2A4473F4001FF5EF /* Donut.m */,
+				015340F02A4474B3001FF5EF /* Donut.h */,
+				015340ED2A447439001FF5EF /* FoodTruckModel.m */,
+				015340EF2A447478001FF5EF /* FoodTruckModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0167BDBB2A4463930053F587 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +131,7 @@
 				0167BDD52A4463940053F587 /* LaunchScreen.storyboard */,
 				0167BDD82A4463940053F587 /* Info.plist */,
 				0167BDD92A4463940053F587 /* main.m */,
+				015340F12A4475F4001FF5EF /* Model */,
 			);
 			path = ObserverPatternObjectiveC;
 			sourceTree = "<group>";
@@ -274,6 +292,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				015340EC2A4473F4001FF5EF /* Donut.m in Sources */,
+				015340EE2A447439001FF5EF /* FoodTruckModel.m in Sources */,
 				0167BDCF2A4463930053F587 /* ViewController.m in Sources */,
 				0167BDC92A4463930053F587 /* AppDelegate.m in Sources */,
 				0167BDDA2A4463940053F587 /* main.m in Sources */,
