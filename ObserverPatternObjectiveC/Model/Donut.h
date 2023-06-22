@@ -11,7 +11,9 @@
 #import <Foundation/Foundation.h>
 
 @interface Donut: NSObject
-@property (nonatomic, copy) NSString* name;
+@property (nonatomic, strong) NSString* name;
+
+- (instancetype) initWithName: (NSString *)name;
 @end
 
 #endif /* Donut_h */

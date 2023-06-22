@@ -6,13 +6,18 @@
 //
 
 #import "ViewController.h"
+#import "Observer.h"
+#import "FoodTruckModel.h"
 
-@interface ViewController () <UITableViewDelegate, UITableViewDataSource> {
+//@interface ViewController () <UITableViewDelegate, UITableViewDataSource> {
+@interface ViewController () {
 }
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UIButton *button;
-@property (assign) NSInteger rowCount;
+@property (assign) NSInteger capacity;
+
+@property (strong) id<Observer> observer;
 
 @end
 
@@ -21,7 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.rowCount = 30;
+    self.capacity = 30;
+    self.observer = [[FoodTruckModel alloc] initWithCapacity:self.capacity];
     
     self.button = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.button addTarget:self action:@selector(addDonut:) forControlEvents:UIControlEventTouchUpInside];
@@ -31,26 +37,47 @@
     [self.view addSubview:self.button];
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.height - 100) style:UITableViewStylePlain];
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
+    
+    //[self updateTable];
+    
+    //self.tableView.dataSource = self;
+    //self.tableView.delegate = self;
     [self.view addSubview:self.tableView];
 }
 
 - (void) addDonut:(UIButton *)sender {
     NSLog(@"addDonut is clicked");
-}
-
-- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    
+    if ([self.observer respondsToSelector:@selector((addDonut:))]) {
+        [self.observer addDonut:@"foo"];
     }
-    cell.textLabel.text = @"test cell";
-    return cell;
 }
 
-- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.rowCount;
+- (void) updateTable {
+    if ([self.observer respondsToSelector:@selector((getDonuts:))]) {
+        NSArray *donuts = [self.observer getDonuts];
+        
+        for (int i=0; i<donuts.count; i++) {
+            UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+            cell.textLabel.text = donuts[i];
+            [self.tableView addSubview:cell];
+        }
+    }
 }
+
+/*
+ - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+ UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell"];
+ if (cell == nil) {
+ cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+ }
+ cell.textLabel.text = @" ";
+ return cell;
+ }
+ 
+ - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+ return self.capacity;
+ }
+ */
 
 @end

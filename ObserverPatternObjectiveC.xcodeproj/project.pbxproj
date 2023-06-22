@@ -43,6 +43,7 @@
 		015340ED2A447439001FF5EF /* FoodTruckModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoodTruckModel.m; sourceTree = "<group>"; };
 		015340EF2A447478001FF5EF /* FoodTruckModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoodTruckModel.h; sourceTree = "<group>"; };
 		015340F02A4474B3001FF5EF /* Donut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Donut.h; sourceTree = "<group>"; };
+		015340F52A447B76001FF5EF /* Observer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Observer.h; sourceTree = "<group>"; };
 		0167BDC42A4463930053F587 /* ObserverPatternObjectiveC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObserverPatternObjectiveC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0167BDC72A4463930053F587 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0167BDC82A4463930053F587 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -132,6 +133,7 @@
 				0167BDD82A4463940053F587 /* Info.plist */,
 				0167BDD92A4463940053F587 /* main.m */,
 				015340F12A4475F4001FF5EF /* Model */,
+				015340F52A447B76001FF5EF /* Observer.h */,
 			);
 			path = ObserverPatternObjectiveC;
 			sourceTree = "<group>";

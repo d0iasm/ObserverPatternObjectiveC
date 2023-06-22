@@ -9,12 +9,16 @@
 #define FoodTruckModel_h
 
 #import <Foundation/Foundation.h>
+#import "Observer.h"
 
 @class Donut;
 
-@interface FoodTruckModel: NSObject
-@property (nonatomic, copy) Donut* donuts;
+@interface FoodTruckModel: NSObject <Observer>
 @property (nonatomic, assign) NSInteger count;
+@property (nonatomic, strong) NSMutableArray* donuts;
+
+- (instancetype)initWithCapacity: (NSInteger) capacity;
+
 @end
 
 #endif /* FoodTruckModel_h */

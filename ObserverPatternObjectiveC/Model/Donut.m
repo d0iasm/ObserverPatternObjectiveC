@@ -14,6 +14,12 @@
 
 @implementation Donut
 
-
+- (instancetype)initWithName: (NSString *)name {
+    self = [[Donut alloc] init];
+    if (self) {
+        self.name = name;
+    }
+    return self;
+}
 
 @end
