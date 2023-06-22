@@ -108,8 +108,7 @@
 				0167BDC82A4463930053F587 /* AppDelegate.m */,
 				0167BDCA2A4463930053F587 /* SceneDelegate.h */,
 				0167BDCB2A4463930053F587 /* SceneDelegate.m */,
-				0167BDCD2A4463930053F587 /* ViewController.h */,
-				0167BDCE2A4463930053F587 /* ViewController.m */,
+				0167BDFC2A4469F70053F587 /* Controller */,
 				0167BDD02A4463930053F587 /* Main.storyboard */,
 				0167BDD32A4463940053F587 /* Assets.xcassets */,
 				0167BDD52A4463940053F587 /* LaunchScreen.storyboard */,
@@ -134,6 +133,15 @@
 				0167BDEF2A4463940053F587 /* ObserverPatternObjectiveCUITestsLaunchTests.m */,
 			);
 			path = ObserverPatternObjectiveCUITests;
+			sourceTree = "<group>";
+		};
+		0167BDFC2A4469F70053F587 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0167BDCD2A4463930053F587 /* ViewController.h */,
+				0167BDCE2A4463930053F587 /* ViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
